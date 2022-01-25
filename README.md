@@ -3,9 +3,9 @@
 
 ## Description
 
-This Personality Quiz will help you determine which **INSERT POPULAR TV SHOW**
-character you are! Are you more of a **INSERT MAIN CHARACTER'S NAME** or are you
-secretly a **INSERT VILLAIN NAME HERE**? Take this quiz to find out today!
+This Personality Quiz will help you determine which Villain you are! 
+Are you more of a Doofenshmirtz or are you
+secretly a Lord Farquad? Take this quiz to find out today!
 
 ## Overview
 
@@ -29,7 +29,7 @@ At a high level, the Personality Quiz works in the following way:
 
 ### Flowchart
 
-![Personality Quiz](../images/PersonalityQuiz.png)
+! [Flowchart](flowchart1.png)
 
 ## Methods and Classes
 
@@ -37,9 +37,18 @@ The Personality Quiz has several complexities. To help manage this, I have
 chosen to create a `Question` class as well as breaking my program's logic 
 into 3 methods: 
 
-* `static int AskQuestion(Question)`
+* `static int AskQuestion(Question)` 
+   <!-- What Quality Makes for the Perfect Villain? [1]  -->
+   <!-- Which Color Suits a Villain Best?  [2] -->
+   <!-- How Would People Describe You?  [3] -->
+   <!-- What Motivates You? [4]  -->
 * `static int GetValidAnswer(List<string> answers);`
+ <!-- Brilliance [A] , Cold-hearted [B] , Manipulative [C] , Dramatic [D] [1] -->
+   <!--  Red [A] , Pattern [B] , Purple [C] , Black [D] [2] -->
+   <!-- Cunning [A] , Sneaky [B] , Selfish [C] , Dimwitted [D] [3] -->
+   <!-- Total Destruction [A] , Achievement [B] , Popularity [C] , Total Control [D] [4] -->
 * `static string GetResult(List<int> scores, List<string> results);`
+   <!-- Satan [A] , Gru [B], Kailey [C] , Doofenshmirtz [D] -->
 
 ### Question Class
 
