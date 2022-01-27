@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic; // Feedback(jcollard 2022-01-27): This line makes it so you can use the List data type.
-// using List; 
+using System.Collections.Generic; 
 
 namespace PersonalProject
 {
@@ -8,31 +7,74 @@ namespace PersonalProject
     {
         static void Main(string[] args)
         {
-            // Feedback(jcollard 2022-01-27): 
-            // Here is an example of how you would create a question:
-            
-            // First create a new Question()
-            Question simpleQuestion = new Question();
 
-            // Next, set the question to be an actual question.
-            simpleQuestion.question = "How much wood could a woodchuck chuck if a woodchuck could chuck wood?";
+            Question Quality = new Question();
+            Quality.question = "What Quality Makes for the Perfect Villain?";
+            Quality.answers.Add("Brilliance");
+            Quality.answers.Add("Cold-Hearted");
+            Quality.answers.Add("Manipulative");
+            Quality.answers.Add("Dramatic");
 
-            // Next, add answers to the question
-            simpleQuestion.answers.Add("As much wood as a woodchuck could chuck if a woodchuck could chuck wood.");
-            simpleQuestion.answers.Add("Uh... 14?");
-            simpleQuestion.answers.Add("None. Clearly the woodchuck is a manifestation of all your fears.");
+            Console.WriteLine(Quality.question);
 
-            // Finally, you can display the question and answers
-            Console.WriteLine(simpleQuestion.question);
+            Console.WriteLine($"1. {Quality.answers[0]}");
+            Console.WriteLine($"2. {Quality.answers[1]}");
+            Console.WriteLine($"3. {Quality.answers[2]}");
+            Console.WriteLine($"4. {Quality.answers[3]}");
 
-            // For your final solution, you will loop through these rather than manually selecting each one.
-            Console.WriteLine($"1. {simpleQuestion.answers[0]}");
-            Console.WriteLine($"2. {simpleQuestion.answers[1]}");
-            Console.WriteLine($"3. {simpleQuestion.answers[2]}");
+
+            Question Description = new Question();
+            Description.question = "Which Color Suits a Villain Best?";
+            Description.answers.Add("Red");
+            Description.answers.Add("Pattern");
+            Description.answers.Add("Purple");
+            Description.answers.Add("Black");
+
+            Console.WriteLine(Description.question);
+
+            Console.WriteLine($"1. {Description.answers[0]}");
+            Console.WriteLine($"2. {Description.answers[1]}");
+            Console.WriteLine($"3. {Description.answers[2]}");
+            Console.WriteLine($"4. {Description.answers[3]}");
+
+
+            Question Color = new Question();
+            Color.question = "How Would People Describe You?";
+            Color.answers.Add("Cunning");
+            Color.answers.Add("Sneaky");
+            Color.answers.Add("Selfish");
+            Color.answers.Add("Dimwitted");
+
+            Console.WriteLine(Color.question);
+
+            Console.WriteLine($"1. {Color.answers[0]}");
+            Console.WriteLine($"2. {Color.answers[1]}");
+            Console.WriteLine($"3. {Color.answers[2]}");
+            Console.WriteLine($"4. {Color.answers[3]}");
+
+
+            Question Motivation = new Question();
+            Motivation.question = "What motivates you?";
+            Motivation.answers.Add("Total Destruction");
+            Motivation.answers.Add("Achievement");
+            Motivation.answers.Add("Popularity");
+            Motivation.answers.Add("Total Control");
+
+            Console.WriteLine(Motivation.question);
+
+            Console.WriteLine($"1. {Motivation.answers[0]}");
+            Console.WriteLine($"2. {Motivation.answers[1]}");
+            Console.WriteLine($"3. {Motivation.answers[2]}");
+            Console.WriteLine($"4. {Motivation.answers[3]}");
+
 
         }
 
-        // TODO(jcollard 2022-01-27): Add a documentation comment
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Question"></param>
+        /// <returns></returns>
         public static int AskQuestion(String Question)
         {
             // Display Question
@@ -41,7 +83,11 @@ namespace PersonalProject
             return -1;
         }
 
-        // TODO(jcollard 2022-01-27): Add a documentation comment
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="answers"></param>
+        /// <returns></returns>
         public static int GetValidAnswer(List<string> answers)
         {
             // Validate that there is at least 1 possible answer.
@@ -56,7 +102,12 @@ namespace PersonalProject
             return -1;
         }
 
-        // TODO(jcollard 2022-01-27): Add a documentation comment
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="scores"></param>
+        /// <param name="results"></param>
+        /// <returns></returns>
         public static string GetResult(List<int> scores, List<string> results)
         {
             // Initialize highest to 0. This variable represents the highest score we have seen so far.
@@ -82,8 +133,6 @@ namespace PersonalProject
 
     }
 
-    // Feedback(jcollard 2022-01-27): I've added in the Question class for you.
-    // This class stores both a question string and a list of answers together!
     class Question 
     {
         public string question;
