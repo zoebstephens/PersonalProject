@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic; // Feedback(jcollard 2022-01-27): This line makes it so you can use the List data type.
 // using List; 
 
 namespace PersonalProject
@@ -7,8 +8,31 @@ namespace PersonalProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Feedback(jcollard 2022-01-27): 
+            // Here is an example of how you would create a question:
+            
+            // First create a new Question()
+            Question simpleQuestion = new Question();
+
+            // Next, set the question to be an actual question.
+            simpleQuestion.question = "How much wood could a woodchuck chuck if a woodchuck could chuck wood?";
+
+            // Next, add answers to the question
+            simpleQuestion.answers.Add("As much wood as a woodchuck could chuck if a woodchuck could chuck wood.");
+            simpleQuestion.answers.Add("Uh... 14?");
+            simpleQuestion.answers.Add("None. Clearly the woodchuck is a manifestation of all your fears.");
+
+            // Finally, you can display the question and answers
+            Console.WriteLine(simpleQuestion.question);
+
+            // For your final solution, you will loop through these rather than manually selecting each one.
+            Console.WriteLine($"1. {simpleQuestion.answers[0]}");
+            Console.WriteLine($"2. {simpleQuestion.answers[1]}");
+            Console.WriteLine($"3. {simpleQuestion.answers[2]}");
+
         }
+
+        // TODO(jcollard 2022-01-27): Add a documentation comment
         public static int AskQuestion(String Question)
         {
             // Display Question
@@ -16,6 +40,8 @@ namespace PersonalProject
             // Use GetValidAnswer method to get the user's response
             return -1;
         }
+
+        // TODO(jcollard 2022-01-27): Add a documentation comment
         public static int GetValidAnswer(List<string> answers)
         {
             // Validate that there is at least 1 possible answer.
@@ -30,6 +56,7 @@ namespace PersonalProject
             return -1;
         }
 
+        // TODO(jcollard 2022-01-27): Add a documentation comment
         public static string GetResult(List<int> scores, List<string> results)
         {
             // Initialize highest to 0. This variable represents the highest score we have seen so far.
@@ -53,5 +80,13 @@ namespace PersonalProject
         /// <returns>whatever letter +1 the user chose</returns>
 
 
+    }
+
+    // Feedback(jcollard 2022-01-27): I've added in the Question class for you.
+    // This class stores both a question string and a list of answers together!
+    class Question 
+    {
+        public string question;
+        public List<string> answers = new List<string>();
     }
 }
