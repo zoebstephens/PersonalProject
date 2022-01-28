@@ -1,0 +1,15 @@
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.csproj.AssemblyReference.cache
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.AssemblyInfoInputs.cache
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.AssemblyInfo.cs
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.csproj.CoreCompileInputs.cache
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/PersonalProject.deps.json
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/PersonalProject.runtimeconfig.json
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/PersonalProject.runtimeconfig.dev.json
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/PersonalProject.dll
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/ref/PersonalProject.dll
+/Users/sofistephens/Documents/GitHub/PersonalProject/bin/Debug/net5.0/PersonalProject.pdb
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.dll
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/ref/PersonalProject.dll
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.pdb
+/Users/sofistephens/Documents/GitHub/PersonalProject/obj/Debug/net5.0/PersonalProject.genruntimeconfig.cache

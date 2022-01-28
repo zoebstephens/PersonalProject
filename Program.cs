@@ -7,6 +7,15 @@ namespace PersonalProject
     {
         static void Main(string[] args)
         {
+            // Checks if the user added a command line argument
+            // Also checks if the first argument is "test"
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return; // Exits the program 
+            }
+
+            // Otherwise, the program continues executing
 
             Question Quality = new Question();
             Quality.question = "What Quality Makes for the Perfect Villain?";
@@ -67,6 +76,19 @@ namespace PersonalProject
             Console.WriteLine($"3. {Motivation.answers[2]}");
             Console.WriteLine($"4. {Motivation.answers[3]}");
 
+
+        }
+
+        public static void TestAll()
+        {
+            bool testAskQuestion = TestAskQuestion.RunTest();
+            Console.WriteLine($"Test AskQuestion(question) : {testAskQuestion}");
+
+            bool testGetResult = TestGetResult.RunTest();
+            Console.WriteLine($"Test GetResult(scores, results) : {testGetResult}");
+
+            bool testGetValidAnswer = TestGetValidAnswer.RunTest();
+            Console.WriteLine($"Test GetValidAnswer(answers) : {testGetValidAnswer}");
 
         }
 
