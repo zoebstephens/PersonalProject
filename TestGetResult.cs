@@ -6,6 +6,10 @@ namespace PersonalProject
     {
         public static bool RunTest()
         {
+            List<string> options = new List<string>();
+            options.Add("First Option");
+            options.Add("Second Option");
+            options.Add("Third Option");
             return false;
         }
     }
