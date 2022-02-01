@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sofistephens/Documents/GitHub/PersonalProject/PersonalProject.csproj": {}
+    "/Users/jcollard/git/personal-projects1/zoe/PersonalProject.csproj": {}
   },
   "projects": {
-    "/Users/sofistephens/Documents/GitHub/PersonalProject/PersonalProject.csproj": {
+    "/Users/jcollard/git/personal-projects1/zoe/PersonalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sofistephens/Documents/GitHub/PersonalProject/PersonalProject.csproj",
+        "projectUniqueName": "/Users/jcollard/git/personal-projects1/zoe/PersonalProject.csproj",
         "projectName": "PersonalProject",
-        "projectPath": "/Users/sofistephens/Documents/GitHub/PersonalProject/PersonalProject.csproj",
-        "packagesPath": "/Users/sofistephens/.nuget/packages/",
-        "outputPath": "/Users/sofistephens/Documents/GitHub/PersonalProject/obj/",
+        "projectPath": "/Users/jcollard/git/personal-projects1/zoe/PersonalProject.csproj",
+        "packagesPath": "/Users/jcollard/.nuget/packages/",
+        "outputPath": "/Users/jcollard/git/personal-projects1/zoe/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sofistephens/.nuget/NuGet/NuGet.Config"
+          "/Users/jcollard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }
