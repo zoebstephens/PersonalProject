@@ -6,31 +6,22 @@ namespace PersonalProject
     {
         public static bool RunTest()
         {
-            // TODO(jcollard 2022-02-01): These look great.
-            // Now, figure out how to call your methods. In this case you would do the following:
-            //
-            // 1. Start by setting up a Question object
-            // We do this because your method AskQuestion takes 1 parameter which must be a Question
-            //
+            
             Question testQuestion = new Question();
             testQuestion.question = "Will Kailey Show up to Class Today?";
             testQuestion.answers.Add("No");
             testQuestion.answers.Add("Yes, She will be late. ");
             testQuestion.answers.Add("She is 'sick' ");
-            //
-            // Then, create a message to be displayed to the tester. What should the method
-            // write to the console when you pass testQuestion as an argument?
-            //
+          
             Console.WriteLine("Expected: the output to contain 3 options.");
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again.");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1."); 
-            //
+            
              int result = Program.AskQuestion(testQuestion.question);
             //
             // Then we check that the result is equal to 1 because that is what we told the tester to enter.
             // 
 
-            // TODO(jcolalrd 2022-02-03): You need to check the result:
 
             if (result != 0)
             {
@@ -44,19 +35,35 @@ namespace PersonalProject
             testQuestion.answers.Add("No");
             testQuestion.answers.Add("Yes, She will be late. ");
             testQuestion.answers.Add("She is 'sick' ");
-
-            Console.WriteLine("Expected: the output to contain 3 options.");
-            Console.WriteLine("First type 4. This should be an invalid option. It will ask again.");
-            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1."); // TODO(jcollard 2022-02-03): Try asking them to enter a different valid option
+            testQuestion.answers.Add("Of course!");
 
 
-            // TODO(jcollard 2022-02-03): get rid of the 'int' part here. You only need that the first time.
-             int result = Program.AskQuestion(testQuestion.question);
+            Console.WriteLine("Expected: the output to contain 4 options.");
+            Console.WriteLine("First type 5. This should be an invalid option. It will ask again.");
+            Console.WriteLine("Next type 2. This should be a valid option. By selecting 2, the method should return 2."); // TODO(jcollard 2022-02-03): Try asking them to enter a different valid option
 
-             // TODO(jcollard 2022-02-03): You need to check the result. See the exapmle above
 
-            // Think of a few more tests you could do. What should happen if the question has no answers?
-            // What should happen if the question has more than 3 answers?
+            result = Program.AskQuestion(testQuestion.question);
+
+            if (result != 1)
+            {
+                // When they select 2, the index is 1. If the result is not 1, we fail and display an error message
+                Console.Error.WriteLine($"Expected the result to be 1 but it was {result}.");
+                return false;
+            }
+
+            testQuestion = new Question();
+            testQuestion.question = "Is music playing";
+
+            Console.WriteLine("Expected: the output to contain 0 options.");
+            Console.WriteLine("First type 1. This should be an invalid option. It will ask again.");
+            Console.WriteLine("Next type enter. This should be a valid option. By selecting enter, the method should move on to the next question."); 
+
+            if (result != 'enter')
+            {
+                Console.Error.WriteLine($"Expected the result to be 'enter' but it was {result}.");
+                return false;
+            }
 
 
             // everyhting seems to be working, so return true 
