@@ -6,11 +6,21 @@ namespace PersonalProject
     {
         public static bool RunTest()
         {
-            List<string> options = new List<string>();
-            options.Add("First Option");
-            options.Add("Second Option");
-            options.Add("Third Option");
-            return false;
+            List<int> scores = new List<int>();
+            scores.Add(0);
+            scores.Add(4);
+
+            List<string> results = new List<string>();
+            results.Add("Kim Kardashian");
+            results.Add("Woody");
+            string result = Program.GetResult(scores,results);
+
+            if (result != "Woody")
+            {
+                Console.Error.WriteLine($"Expected result to be 'Woody' but was {0}");
+                return false;
+            }
+        
         }
     }
 }
