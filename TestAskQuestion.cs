@@ -59,6 +59,11 @@ namespace PersonalProject
             Console.WriteLine("First type 1. This should be an invalid option. It will ask again.");
             Console.WriteLine("Next type enter. This should be a valid option. By selecting enter, the method should move on to the next question."); 
 
+            // TODO (jcollard 2022-02-05): Enter should be an invalid option.
+            // This method only allows you to enter numbers. I believe that,
+            // since your quesiton doesn't have any answers, you should probably
+            // throw an exception. To check that, you will want to use a try / catch
+            // block.
             if (result != 'enter')
             {
                 Console.Error.WriteLine($"Expected the result to be 'enter' but it was {result}.");
