@@ -76,7 +76,6 @@ namespace PersonalProject
 
             // everything seems to be working, so return true 
             return true;
-
         }
     }
 }
