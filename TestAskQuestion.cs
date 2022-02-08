@@ -6,18 +6,18 @@ namespace PersonalProject
     {
         public static bool RunTest()
         {
-            
+
             Question testQuestion = new Question();
             testQuestion.question = "Will Kailey Show up to Class Today?";
             testQuestion.answers.Add("No");
             testQuestion.answers.Add("Yes, She will be late. ");
             testQuestion.answers.Add("She is 'sick' ");
-          
+
             Console.WriteLine("Expected: the output to contain 3 options.");
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again.");
-            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1."); 
-            
-             int result = Program.AskQuestion(testQuestion.question);
+            Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
+
+            int result = Program.AskQuestion(testQuestion.question);
             //
             // Then we check that the result is equal to 1 because that is what we told the tester to enter.
             // 
@@ -57,22 +57,24 @@ namespace PersonalProject
 
             Console.WriteLine("Expected: the output to contain 0 options.");
             Console.WriteLine("First type 1. This should be an invalid option. It will ask again.");
-            Console.WriteLine("Next type enter. This should be a valid option. By selecting enter, the method should move on to the next question."); 
+            Console.WriteLine("Next type enter. This should be a valid option. By selecting enter, the method should move on to the next question.");
 
-            // TODO (jcollard 2022-02-05): Enter should be an invalid option.
-            // This method only allows you to enter numbers. I believe that,
-            // since your quesiton doesn't have any answers, you should probably
-            // throw an exception. To check that, you will want to use a try / catch
-            // block.
-            if (result != 'enter')
+            try
             {
-                Console.Error.WriteLine($"Expected the result to be 'enter' but it was {result}.");
+                // this should produce an exception
+                Program.AskQuestion("enter");
+
+                // if we get to this line that means there was not an exception
+                Console.Error.WriteLine($"Expected an exception from loading \"enter\"");
                 return false;
+
+            }
+            catch (Exception e)
+            {
+                // Ignore the error
             }
 
-
-            // everyhting seems to be working, so return true 
-
+            // everything seems to be working, so return true 
             return true;
 
         }
