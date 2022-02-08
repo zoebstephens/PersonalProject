@@ -61,9 +61,7 @@ namespace PersonalProject
                 return false;
             }
 
-            // TODO (jcollard 2022-02-03): Write a few more test cases here. What should happen with a list with 4 answers?
-            // What are some other invalid answers the user could enter? What about '-5' or 'Cat'?
-
+        
 
             return true;
         }
