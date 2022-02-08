@@ -121,6 +121,13 @@ namespace PersonalProject
             // Display an error message
             // Go to 3
             // Otherwise, return the user's choice.
+            if (GetValidAnswer>= 1)
+            {
+                throw new Exception($"At least one possible answer does not exist.");
+            }
+            List<string> result = File.ReadAllLines(answers).ToList();
+
+        
             return -1;
         }
 
