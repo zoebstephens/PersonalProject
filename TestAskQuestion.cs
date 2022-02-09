@@ -17,7 +17,7 @@ namespace PersonalProject
             Console.WriteLine("First type 4. This should be an invalid option. It will ask again.");
             Console.WriteLine("Next type 1. This should be a valid option. By selecting 1, the method should return 1.");
 
-            int result = Program.AskQuestion(testQuestion.question);
+            int result = Program.AskQuestion(testQuestion);
             //
             // Then we check that the result is equal to 1 because that is what we told the tester to enter.
             // 
@@ -43,7 +43,7 @@ namespace PersonalProject
             Console.WriteLine("Next type 2. This should be a valid option. By selecting 2, the method should return 2."); // TODO(jcollard 2022-02-03): Try asking them to enter a different valid option
 
 
-            result = Program.AskQuestion(testQuestion.question);
+            result = Program.AskQuestion(testQuestion);
 
             if (result != 1)
             {
@@ -62,7 +62,7 @@ namespace PersonalProject
             try
             {
                 // this should produce an exception
-                Program.AskQuestion("enter");
+                Program.AskQuestion(testQuestion);
 
                 // if we get to this line that means there was not an exception
                 Console.Error.WriteLine($"Expected an exception from loading \"enter\"");

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 namespace PersonalProject
 {
@@ -97,16 +97,36 @@ namespace PersonalProject
         /// </summary>
         /// <param name="Question"></param>
         /// <returns></returns>
-        public static int AskQuestion(String Question)
+        public static int AskQuestion(Question question)
         {
+            if (question == null)
+            {
+                throw new ArgumentNullException("Question can not be null");
+
+            }
+
+            List<string> answers = question.answers;
+
+            if (answers.Count == 0)
+            {
+                throw new ArgumentException("The question must contain at least 1 option");
+            }
+
+            int ix = 1;
+            foreach (string answer in answers)
+            {
+                Console.WriteLine($"{ix}. {answer}");
+                ix = ix + 1;
+            }
+
             // Display Question
             // Loop through each answer and display it 
             // Use GetValidAnswer method to get the user's response
-            return -1;
+            int userChoice = GetValidAnswer(answers);
+            return userChoice;
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="answers"></param>
         /// <returns></returns>
@@ -121,14 +141,37 @@ namespace PersonalProject
             // Display an error message
             // Go to 3
             // Otherwise, return the user's choice.
-            if (GetValidAnswer>= 1)
+            if (answers.Count == 0)
             {
                 throw new Exception($"At least one possible answer does not exist.");
             }
-            List<string> result = File.ReadAllLines(answers).ToList();
 
-        
-            return -1;
+            Console.WriteLine("Select an Option");
+            int userChoice;
+
+            do
+            {
+                Console.Write($"Enter a number between 1 and {answers.Count}: ");
+                string input = Console.ReadLine();
+
+                bool isANumber = int.TryParse(input, out userChoice);
+
+                if (isANumber == false)
+                {
+                    Console.Error.WriteLine("You did not enter a valid number.");
+                }
+                else if (userChoice < 1)
+                {
+                    Console.Error.WriteLine("That number is not greater than 1.");
+                }
+                else if (userChoice > answers.Count)
+                {
+                    Console.Error.WriteLine($"That number is not less than {answers.Count}.");
+                }
+            }
+            while (userChoice < 1 || userChoice > answers.Count);
+
+            return userChoice -1;
         }
 
         /// <summary>
@@ -162,7 +205,7 @@ namespace PersonalProject
 
     }
 
-    class Question 
+    class Question
     {
         public string question;
         public List<string> answers = new List<string>();
