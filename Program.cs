@@ -190,6 +190,13 @@ namespace PersonalProject
             // Update highestIx to store the currentIx (this is the index of the highest score we have seen so far)
             // After we have checked each score, highestIx should be the index of the highest score.
             // return results[highestIx];
+
+            // TODO(jcollard 2022-02-10): This is a tricky method to write. Each
+            // of the lists is associated with the other. I've created an
+            // example showing how to use a foreach loop to search a list for a
+            // value. You can find it here:
+            // https://jcollard.github.io/IntroToCSharpSite/examples/association-list
+
             return null;
         }
 
