@@ -17,6 +17,13 @@ namespace PersonalProject
 
             // Otherwise, the program continues executing
 
+            List<int> scores = new List<int>();
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+
             Question Quality = new Question();
             Quality.question = "What Quality Makes for the Perfect Villain?";
             Quality.answers.Add("Brilliance");
@@ -24,12 +31,8 @@ namespace PersonalProject
             Quality.answers.Add("Manipulative");
             Quality.answers.Add("Dramatic");
 
-            Console.WriteLine(Quality.question);
-
-            Console.WriteLine($"1. {Quality.answers[0]}");
-            Console.WriteLine($"2. {Quality.answers[1]}");
-            Console.WriteLine($"3. {Quality.answers[2]}");
-            Console.WriteLine($"4. {Quality.answers[3]}");
+            int result = AskQuestion(Quality);
+            scores[result] = scores[result] + 1;
 
 
             Question Description = new Question();
@@ -39,12 +42,8 @@ namespace PersonalProject
             Description.answers.Add("Purple");
             Description.answers.Add("Black");
 
-            Console.WriteLine(Description.question);
-
-            Console.WriteLine($"1. {Description.answers[0]}");
-            Console.WriteLine($"2. {Description.answers[1]}");
-            Console.WriteLine($"3. {Description.answers[2]}");
-            Console.WriteLine($"4. {Description.answers[3]}");
+            AskQuestion(Description);
+            scores[result] = scores[result] + 1;
 
 
             Question Color = new Question();
@@ -54,12 +53,8 @@ namespace PersonalProject
             Color.answers.Add("Selfish");
             Color.answers.Add("Dimwitted");
 
-            Console.WriteLine(Color.question);
-
-            Console.WriteLine($"1. {Color.answers[0]}");
-            Console.WriteLine($"2. {Color.answers[1]}");
-            Console.WriteLine($"3. {Color.answers[2]}");
-            Console.WriteLine($"4. {Color.answers[3]}");
+           AskQuestion(Color);
+           scores[result] = scores[result] + 1;
 
 
             Question Motivation = new Question();
@@ -69,12 +64,16 @@ namespace PersonalProject
             Motivation.answers.Add("Popularity");
             Motivation.answers.Add("Total Control");
 
-            Console.WriteLine(Motivation.question);
+            AskQuestion(Motivation);
+            scores[result] = scores[result] + 1;
 
-            Console.WriteLine($"1. {Motivation.answers[0]}");
-            Console.WriteLine($"2. {Motivation.answers[1]}");
-            Console.WriteLine($"3. {Motivation.answers[2]}");
-            Console.WriteLine($"4. {Motivation.answers[3]}");
+            List<string> results = new List<string>();
+            results.Add("Satan");
+            results.Add("Gru");
+            results.Add("Kailey");
+            results.Add("Doofenshmirtz");
+            GetResult(scores, results);
+
 
 
         }
@@ -181,24 +180,31 @@ namespace PersonalProject
         /// <param name="results"></param>
         /// <returns></returns>
         public static string GetResult(List<int> scores, List<string> results)
-        {
-            // Initialize highest to 0. This variable represents the highest score we have seen so far.
-            // Initialize highestIx to 0. This variable represents the index of the highest score we have seen so far.
-            // Loop through each score in scores, tracking the index in a variable currentIx
-            // If the score is greater than the highest score
-            // Update highest to store the score (this is the highest score we have seen so far)
-            // Update highestIx to store the currentIx (this is the index of the highest score we have seen so far)
-            // After we have checked each score, highestIx should be the index of the highest score.
-            // return results[highestIx];
 
-            // TODO(jcollard 2022-02-10): This is a tricky method to write. Each
-            // of the lists is associated with the other. I've created an
-            // example showing how to use a foreach loop to search a list for a
-            // value. You can find it here:
-            // https://jcollard.github.io/IntroToCSharpSite/examples/association-list
+            {
+                if (scores == null || results == null) throw new Exception("Scores List and Results list must be non-null.");
+                if (scores.Count == 0) throw new Exception("Cannot process an empty list.");
+                if (results.Count != scores.Count) throw new Exception("scores and results lists were not the same length.");
 
-            return null;
-        }
+                int highestscore = scores[0];
+                string highestresult = results[0];
+
+                int index = 0;
+                foreach (int score in scores)
+                {
+                    if (score > highestscore)
+                    {
+                        highestscore = scores[index];
+                        highestresult = results[index];
+                    }
+
+                    index = index + 1;
+                }
+                return highestresult;
+            }
+        
+
+    
 
         /// <summary>
         /// Given a prompt to show to the user, displays the prompt then reads

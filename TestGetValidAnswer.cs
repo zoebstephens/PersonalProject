@@ -15,7 +15,7 @@ namespace PersonalProject
 
             if (result != 1)
             {
-                Console.Error.WriteLine($"Expected result to be 1 but was{result}");
+                Console.Error.WriteLine($"Expected result to be 1 but was {result}");
                 return false;
             }
 
