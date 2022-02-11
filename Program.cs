@@ -22,7 +22,6 @@ namespace PersonalProject
             scores.Add(0);
             scores.Add(0);
             scores.Add(0);
-            scores.Add(0);
 
             Question Quality = new Question();
             Quality.question = "What Quality Makes for the Perfect Villain?";
@@ -121,8 +120,7 @@ namespace PersonalProject
             // Display Question
             // Loop through each answer and display it 
             // Use GetValidAnswer method to get the user's response
-            int userChoice = GetValidAnswer(answers);
-            return userChoice;
+            return GetValidAnswer(question.answers);
         }
 
         /// <summary>
@@ -200,6 +198,7 @@ namespace PersonalProject
 
                     index = index + 1;
                 }
+                Console.WriteLine($"You are {highestresult}");
                 return highestresult;
             }
         
