@@ -91,7 +91,7 @@ namespace PersonalProject
         }
 
         /// <summary>
-        /// 
+        /// This displays the question, the list of answers and waits for the user to input a valid answer. 
         /// </summary>
         /// <param name="Question"></param>
         /// <returns></returns>
