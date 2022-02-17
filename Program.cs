@@ -68,9 +68,9 @@ namespace PersonalProject
 
             List<string> results = new List<string>();
             results.Add("Satan");
-            results.Add("Gru");
-            results.Add("Kailey");
-            results.Add("Doofenshmirtz");
+            results.Add("Jessica C");
+            results.Add("Kailey F");
+            results.Add("Gretchen D");
             GetResult(scores, results);
 
 
@@ -97,6 +97,7 @@ namespace PersonalProject
         /// <returns></returns>
         public static int AskQuestion(Question question)
         {
+
             if (question == null)
             {
                 throw new ArgumentNullException("Question can not be null");
@@ -109,6 +110,8 @@ namespace PersonalProject
             {
                 throw new ArgumentException("The question must contain at least 1 option");
             }
+
+             Console.WriteLine(question.question);
 
             int ix = 1;
             foreach (string answer in answers)
