@@ -30,7 +30,7 @@ namespace PersonalProject
             Quality.answers.Add("Manipulative");
             Quality.answers.Add("Dramatic");
 
-            int result = AskQuestion(Quality);
+            int result = Program.AskQuestion(Quality);
             scores[result] = scores[result] + 1;
 
 
@@ -41,7 +41,7 @@ namespace PersonalProject
             Description.answers.Add("Purple");
             Description.answers.Add("Black");
 
-            AskQuestion(Description);
+            Program.AskQuestion(Description);
             scores[result] = scores[result] + 1;
 
 
@@ -63,7 +63,7 @@ namespace PersonalProject
             Motivation.answers.Add("Popularity");
             Motivation.answers.Add("Total Control");
 
-            AskQuestion(Motivation);
+            Program.AskQuestion(Motivation);
             scores[result] = scores[result] + 1;
 
             List<string> results = new List<string>();
