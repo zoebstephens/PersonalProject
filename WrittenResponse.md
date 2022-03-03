@@ -15,6 +15,8 @@ A person would run my program to find out what villain they are for entertainmen
 
 ### 3a ii.
 
+
+
 My video demonstrates that my program can perform a personality quiz. 
 
 
@@ -35,9 +37,14 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-List<string> results = new List<string>();
-            results.Add("Kim Kardashian");
-            results.Add("Woody");
+List<int> scores = new List<int>();
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+            scores.Add(0);
+
+ int result = Program.AskQuestion(Quality);
+            scores[result] = scores[result] + 1;           
 ```
 
 ### 3b ii.
@@ -58,7 +65,7 @@ int index = 0;
 
                 index = index + 1;
         }
-```
+``` 
 
 ### 3b iii.
 
@@ -139,7 +146,7 @@ The second program code segment must show where your student-developed procedure
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-This displays the question, the list of answers and waits for the user to input a valid answer. This is the main functionality of my program. 
+This displays the question, the list of answers and waits for the user to input a valid answer. This is the main functionality of my program because it is used to display each question. 
 
 ### 3c iv.
 
